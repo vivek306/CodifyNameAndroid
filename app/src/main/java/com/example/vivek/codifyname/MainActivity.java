@@ -129,6 +129,7 @@ public class MainActivity extends ActionBarActivity {
 
         // Custom Toolbar
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("CodifyName()");
     }
 
     // Radio Button effect
