@@ -1,0 +1,186 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.example.vivek.codifyname.MainActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"></include>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+
+            <TextView
+                android:id="@+id/modeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/hint_margin_bottom"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/mode_text"
+                android:textSize="@dimen/abc_text_size_small_material" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/modeText"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/button_divider"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/encodeButton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/round_button"
+                        android:clickable="true"
+                        android:text="@string/fa_lock"
+                        android:textSize="@dimen/abc_text_size_title_material" />
+
+                    <TextView
+                        android:id="@+id/encodeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_divider"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="@string/encode_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/decodeButton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/round_button"
+                        android:clickable="true"
+                        android:text="@string/fa_unlock"
+                        android:textSize="@dimen/abc_text_size_headline_material" />
+
+                    <TextView
+                        android:id="@+id/decodeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/button_divider"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="@string/decode_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/key_text"
+                android:textSize="@dimen/abc_text_size_small_material" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/nameText"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/name_text"
+                android:paddingBottom="@dimen/text_padding"
+                android:paddingTop="@dimen/text_padding" />
+
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editTextName"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/information_text"
+                android:textSize="@dimen/abc_text_size_small_material" />
+
+            <LinearLayout
+                android:id="@+id/editLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/messageText"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/copyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/button_divider"
+                    android:background="@drawable/round_rect_button"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/copy_button" />
+
+                <Button
+                    android:id="@+id/pasteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_rect_button"
+                    android:clickable="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/paste_button" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editLinearLayout"
+                android:ems="10"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/message_text"
+                android:inputType="textFilter|textMultiLine|textNoSuggestions"
+                android:paddingBottom="@dimen/text_padding"
+                android:paddingTop="@dimen/text_padding" />
+
+            <Button
+                android:id="@+id/codifyName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/editTextMessage"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:background="@drawable/round_rect_button"
+                android:clickable="true"
+                android:fontFamily="sans-serif-light"
+                android:padding="@dimen/button_padding"
+                android:text="Submit" />
+
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
