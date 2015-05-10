@@ -1,4 +1,4 @@
-package com.example.vivek.codifyname;
+package com.codify.vivek.codifyname;
 
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;

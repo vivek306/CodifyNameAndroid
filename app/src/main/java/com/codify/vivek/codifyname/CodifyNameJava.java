@@ -1,4 +1,4 @@
-package com.example.vivek.codifyname;
+package com.codify.vivek.codifyname;
 
 import java.util.ArrayList;
 import java.util.Arrays;

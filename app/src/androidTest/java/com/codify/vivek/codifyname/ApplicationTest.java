@@ -1,4 +1,4 @@
-package com.example.vivek.codifyname;
+package com.codify.vivek.codifyname;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

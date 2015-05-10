@@ -1,4 +1,4 @@
-package com.example.vivek.codifyname;
+package com.codify.vivek.codifyname;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -62,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
                 try {
                     String radio = radioValue;
                     String input = editTextMessage.getText().toString();
-                    String name = editTextName.getText().toString().toLowerCase() + editTextName.getText().toString().toUpperCase();
+                    String name = editTextName.getText().toString();
                     String[] nameList = name.replaceAll(" ", "").split("");
                     if (radio != null && !radio.isEmpty()) {
                         // remove duplicates
@@ -167,6 +167,5 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
+    
 }
